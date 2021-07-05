@@ -1,20 +1,24 @@
-com/example/repository/IStudentRepo.java
- com.example.repository.IStudentRepo
-com/example/repository/ITeacherRepo.java
- com.example.repository.ITeacherRepo
-com/example/repository/IAdminRepo.java
- com.example.repository.IAdminRepo
-com/example/model/Admin.java
- com.example.model.Admin
-com/example/model/Clase.java
- com.example.model.Clase
-com/example/repository/IClassRepo.java
- com.example.repository.IClassRepo
-com/example/model/Teacher.java
- com.example.model.Teacher
+com/example/school/model/Student.java
+ com.example.school.model.Student
+com/example/school/repository/ITeacherRepo.java
+ com.example.school.repository.ITeacherRepo
+com/example/school/model/Teacher.java
+ com.example.school.model.Teacher
+com/example/school/repository/IAdminRepo.java
+ com.example.school.repository.IAdminRepo
+com/example/school/service/IStudentService.java
+ com.example.school.service.IStudentService
+com/example/school/repository/IClassRepo.java
+ com.example.school.repository.IClassRepo
 com/example/school/SchoolApplication.java
  com.example.school.SchoolApplication
-com/example/controller/SchoolController.java
- com.example.controller.SchoolController
-com/example/model/Student.java
- com.example.model.Student
+com/example/school/model/Clase.java
+ com.example.school.model.Clase
+com/example/school/model/Admin.java
+ com.example.school.model.Admin
+com/example/school/repository/IStudentRepo.java
+ com.example.school.repository.IStudentRepo
+com/example/school/controller/SchoolController.java
+ com.example.school.controller.SchoolController
+com/example/school/service/StudentService.java
+ com.example.school.service.StudentService
