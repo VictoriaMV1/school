@@ -6,8 +6,8 @@ com/example/school/model/Teacher.java
  com.example.school.model.Teacher
 com/example/school/repository/IAdminRepo.java
  com.example.school.repository.IAdminRepo
-com/example/school/service/IStudentService.java
- com.example.school.service.IStudentService
+com/example/school/repository/IStudentRepo.java
+ com.example.school.repository.IStudentRepo
 com/example/school/repository/IClassRepo.java
  com.example.school.repository.IClassRepo
 com/example/school/SchoolApplication.java
@@ -16,9 +16,9 @@ com/example/school/model/Clase.java
  com.example.school.model.Clase
 com/example/school/model/Admin.java
  com.example.school.model.Admin
-com/example/school/repository/IStudentRepo.java
- com.example.school.repository.IStudentRepo
-com/example/school/controller/SchoolController.java
- com.example.school.controller.SchoolController
 com/example/school/service/StudentService.java
  com.example.school.service.StudentService
+com/example/school/service/IStudentService.java
+ com.example.school.service.IStudentService
+com/example/school/controller/SchoolController.java
+ com.example.school.controller.SchoolController

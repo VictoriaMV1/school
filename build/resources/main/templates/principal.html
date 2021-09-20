@@ -6,5 +6,26 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
+<table>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.address}"></td>
+    </tr>
+</table>
+
+<table>
+    <tr th:each="student : ${findStudent}">
+        <td th:text="${findStudent.id}"></td>
+        <td th:text="${findStudent.name}"></td>
+        <td th:text="${findStudent.address}"></td>
+    </tr>
+</table>
+
+<p th:text="'El estudiante con Id, ' + ${studentDeleted} + 'fue eliminado exitosamente'" />
+
+<p th:text="'El estudiante con Id, ' + ${studentNoExist} + 'No existe'" />
+
+
 </body>
 </html>
