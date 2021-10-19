@@ -1,7 +1,10 @@
 package com.example.school.controller;
 
 import com.example.school.model.Student;
+import com.example.school.model.Teacher;
+import com.example.school.service.ClaseService;
 import com.example.school.service.StudentService;
+import com.example.school.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,6 +56,50 @@ public class SchoolController {
         }
         model.addAttribute("studentNoExist", id);
         return "principal";
+    }
+
+    /* End Points para Teacher */
+
+    @Autowired
+    private TeacherService teacherService;
+
+    @PostMapping("/add-teacher")
+    public String addTeacher(@RequestBody Teacher teacher) throws Exception {
+        teacherService.save(teacher);
+        return "principal2";
+    }
+
+    @GetMapping("/listarTeachers")
+    public String listarTeachers(Model model){
+
+        model.addAttribute("teachers", teacherService.findAll());
+        return "principal2";
+    }
+
+    @GetMapping("/find-teacher/{id}")
+    public String findTeacher(@PathVariable int id, Model model){
+        Optional<Teacher> teacher = teacherService.findById(id);
+
+        if(teacher.isPresent()){
+            model.addAttribute("findTeacher", teacher.get());
+            //return optionalStudent.get();
+            return "principal2";
+        }
+        model.addAttribute("teacherNoExist", teacher.get().getName());
+        return "principal2";
+    }
+
+    @DeleteMapping(path = "/delete-teacher/{id}")
+    public String deleteTeacher(@PathVariable int id, Model model){
+        Optional<Teacher> teacher = teacherService.findById(id);
+
+        if(teacher.isPresent()){
+            model.addAttribute("teacherDeleted", teacher.get().getId());
+            teacherService.deleteById(id);
+            return "principal2";
+        }
+        model.addAttribute("teacherNoExist", id);
+        return "principal2";
     }
 
 }

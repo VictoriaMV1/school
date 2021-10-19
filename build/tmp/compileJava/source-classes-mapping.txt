@@ -20,5 +20,17 @@ com/example/school/service/StudentService.java
  com.example.school.service.StudentService
 com/example/school/service/IStudentService.java
  com.example.school.service.IStudentService
+ com/example/school/service/TeacherService.java
+  com.example.school.service.ITeacherService
+ com/example/school/service/IStudentService.java
+  com.example.school.service.IStudentService
+com/example/school/service/ClaseService.java
+ com.example.school.service.ClaseService
+com/example/school/service/IClaseService.java
+ com.example.school.service.IClaseService
+com/example/school/service/TeacherService.java
+ com.example.school.service.TeacherService
+com/example/school/service/ITeacherService.java
+ com.example.school.service.ITeacherService
 com/example/school/controller/SchoolController.java
  com.example.school.controller.SchoolController
